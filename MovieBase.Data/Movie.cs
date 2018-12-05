@@ -34,5 +34,7 @@ namespace MovieBase.Data
         public string TrailerLink { get; set; }
 
         public Genre GenreName { get; set; }
+
+
     }
 }

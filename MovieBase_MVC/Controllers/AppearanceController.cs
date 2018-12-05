@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MovieBase.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,12 @@ namespace MovieBase_MVC.Controllers
 {
     public class AppearanceController : Controller
     {
+        [Authorize]
         // GET: Appearance
         public ActionResult Index()
         {
-            return View();
+            var model = new AppearanceListItem[0];   
+            return View(model);
         }
 
         // GET: Appearance/Details/5
@@ -28,18 +31,14 @@ namespace MovieBase_MVC.Controllers
 
         // POST: Appearance/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(AppearanceCreate model)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add insert logic here
 
-                return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+            return View(model);
         }
 
         // GET: Appearance/Edit/5

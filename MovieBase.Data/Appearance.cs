@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace MovieBase.Data
 {
+    [Table("Appearance")]
     public class Appearance
     {
         [Required]
