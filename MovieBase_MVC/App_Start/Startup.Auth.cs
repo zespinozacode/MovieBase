@@ -6,6 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using MovieBase_MVC.Models;
+using MovieBase.Data;
 
 namespace MovieBase_MVC
 {
