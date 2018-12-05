@@ -86,5 +86,40 @@ namespace MovieBase.Services
                     };
             }
         }
+
+        public bool UpdateMovie(MovieEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Movies
+                        .Single(e => e.MovieId == model.MovieId && e.UserId == _userId);
+
+                entity.MovieId = model.MovieId;
+                entity.Title = model.Title;
+                entity.ReleaseDate = model.ReleaseDate;
+                entity.Description = model.Description;
+                entity.CoverPicture = model.CoverPicture;
+                entity.TrailerLink = model.TrailerLink;
+                entity.GenreName = model.GenreName;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool DeleteMovie(int movieId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Movies
+                        .Single(e => e.MovieId == movieId && e.UserId == _userId);
+                ctx.Movies.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

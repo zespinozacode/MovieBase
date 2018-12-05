@@ -63,45 +63,65 @@ namespace MovieBase_MVC.Controllers
         // GET: Movie/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var service = CreateMovieService();
+            var detail = service.GetMovieById(id);
+            var model =
+                new MovieEdit
+                {
+                    MovieId = detail.MovieId,
+                    Title = detail.Title,
+                    ReleaseDate = detail.ReleaseDate,
+                    Description = detail.Description,
+                    CoverPicture = detail.CoverPicture,
+                    TrailerLink = detail.TrailerLink,
+                    GenreName = detail.GenreName
+                };
+            return View(model);
         }
 
         // POST: Movie/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, MovieEdit model)
         {
-            try
-            {
-                // TODO: Add update logic here
+            if (!ModelState.IsValid) return View(model);
 
+            if (model.MovieId != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+
+            var service = CreateMovieService();
+
+            if (service.UpdateMovie(model))
+            {
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+
+            return View(model);
         }
 
         // GET: Movie/Delete/5
+        [ActionName("Delete")]
         public ActionResult Delete(int id)
         {
-            return View();
+            var svc = CreateMovieService();
+            var model = svc.GetMovieById(id);
+
+            return View(model);
         }
 
         // POST: Movie/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePost(int id)
         {
-            try
-            {
-                // TODO: Add delete logic here
+            var service = CreateMovieService();
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            service.DeleteMovie(id);
+
+            return RedirectToAction("Index");
         }
     }
 }

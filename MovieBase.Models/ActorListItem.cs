@@ -1,20 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MovieBase.Data
+namespace MovieBase.Models
 {
-    public class Actor
+    public class ActorListItem
     {
-        [Key]
         public int ActorId { get; set; }
 
-        [Required]
         public string Name { get; set; }
 
-        public virtual ICollection<Appearance> Appearances { get; set; }
+        public override string ToString() => Name;
     }
 }
