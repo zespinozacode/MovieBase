@@ -54,6 +54,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActorCreate.cs" />
+    <Compile Include="ActorDetail.cs" />
+    <Compile Include="ActorEdit.cs" />
     <Compile Include="ActorListItem.cs" />
     <Compile Include="MovieCreate.cs" />
     <Compile Include="MovieDetail.cs" />

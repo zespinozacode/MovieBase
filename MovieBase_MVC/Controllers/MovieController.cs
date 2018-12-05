@@ -81,6 +81,7 @@ namespace MovieBase_MVC.Controllers
 
         // POST: Movie/Edit/5
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, MovieEdit model)
         {
             if (!ModelState.IsValid) return View(model);

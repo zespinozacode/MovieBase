@@ -13,6 +13,9 @@ namespace MovieBase.Data
         public int ActorId { get; set; }
 
         [Required]
+        public Guid UserId { get; set; }
+
+        [Required]
         public string Name { get; set; }
 
         public virtual ICollection<Appearance> Appearances { get; set; }

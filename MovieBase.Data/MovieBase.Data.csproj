@@ -69,6 +69,10 @@
     <Compile Include="Migrations\201812051551176_seconddatamigration.Designer.cs">
       <DependentUpon>201812051551176_seconddatamigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812051626164_thirdmigration.cs" />
+    <Compile Include="Migrations\201812051626164_thirdmigration.Designer.cs">
+      <DependentUpon>201812051626164_thirdmigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812051551176_seconddatamigration.resx">
       <DependentUpon>201812051551176_seconddatamigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812051626164_thirdmigration.resx">
+      <DependentUpon>201812051626164_thirdmigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

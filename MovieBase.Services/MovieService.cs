@@ -33,10 +33,10 @@ namespace MovieBase.Services
                  };
 
              using (var ctx = new ApplicationDbContext())
-            {
+             {
                 ctx.Movies.Add(entity);
                 return ctx.SaveChanges() == 1;
-            }
+             }
         }
 
         public IEnumerable<MovieListItem> GetMovies()
@@ -65,14 +65,14 @@ namespace MovieBase.Services
             }
         }
 
-        public MovieDetail GetMovieById(int noteId)
+        public MovieDetail GetMovieById(int movieId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Movies
-                        .Single(e => e.MovieId == noteId && e.UserId == _userId);
+                        .Single(e => e.MovieId == movieId && e.UserId == _userId);
                 return
                     new MovieDetail
                     {
