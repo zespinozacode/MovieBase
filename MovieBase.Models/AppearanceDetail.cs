@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MovieBase.Models
 {
-    public class AppearanceListItem
+    public class AppearanceDetail
     {
         public int AppearanceId { get; set; }
 
@@ -16,8 +16,6 @@ namespace MovieBase.Models
         public int MovieId { get; set; }
 
         public Appearance Appearance { get; set; }
-        public Movie Movie { get; set; }
-        public Actor Actor { get; set; }
 
     }
 }

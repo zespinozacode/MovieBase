@@ -59,6 +59,8 @@
     <Compile Include="ActorEdit.cs" />
     <Compile Include="ActorListItem.cs" />
     <Compile Include="AppearanceCreate.cs" />
+    <Compile Include="AppearanceDetail.cs" />
+    <Compile Include="AppearanceEdit.cs" />
     <Compile Include="AppearanceListItem.cs" />
     <Compile Include="MovieCreate.cs" />
     <Compile Include="MovieDetail.cs" />

@@ -9,11 +9,13 @@ namespace MovieBase.Models
 {
     public class AppearanceCreate
     {
+        public int AppearanceId { get; set; }
+
         public int ActorId { get; set; }
 
         public int MovieId { get; set; }
 
-        public virtual Actor Actor { get; set; }
-        public virtual Movie Movie { get; set; }
+        public Appearance Appearance { get; set; }
+
     }
 }

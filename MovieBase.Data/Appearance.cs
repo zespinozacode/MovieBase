@@ -11,6 +11,9 @@ namespace MovieBase.Data
     [Table("Appearance")]
     public class Appearance
     {
+        //[Key]
+        public int AppearanceId { get; set; }
+
         [Required]
         public Guid UserId { get; set; }
 
