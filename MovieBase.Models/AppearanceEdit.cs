@@ -16,5 +16,8 @@ namespace MovieBase.Models
         public int MovieId { get; set; }
 
         public Appearance Appearance { get; set; }
+
+        public Movie Movie { get; set; }
+        public Actor Actor { get; set; }
     }
 }

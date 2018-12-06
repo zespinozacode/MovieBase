@@ -23,6 +23,7 @@ namespace MovieBase.Services
                  new Appearance()
                  {
                      UserId = _userId,
+                     
                      ActorId = model.ActorId,
                      MovieId = model.MovieId
                  };
@@ -81,8 +82,8 @@ namespace MovieBase.Services
                 return
                     new AppearanceDetail
                     {
-                        ActorId = entity.ActorId,
-                        MovieId = entity.MovieId
+                        Actor = entity.Actor,
+                        Movie = entity.Movie
                     };
             }
         }
@@ -96,8 +97,8 @@ namespace MovieBase.Services
                         .Appearances
                         .Single(e => e.AppearanceId == model.AppearanceId && e.UserId == _userId);
 
-                entity.ActorId = model.ActorId;
-                entity.MovieId = model.MovieId;
+                entity.Actor = model.Actor;
+                entity.Movie = model.Movie;
 
                 return ctx.SaveChanges() == 1;
             }

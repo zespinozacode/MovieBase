@@ -57,64 +57,12 @@
     <Compile Include="Actor.cs" />
     <Compile Include="Appearance.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\201812050939212_InitialCreate.cs" />
-    <Compile Include="Migrations\201812050939212_InitialCreate.Designer.cs">
-      <DependentUpon>201812050939212_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812050945191_initialdatamigration.cs" />
-    <Compile Include="Migrations\201812050945191_initialdatamigration.Designer.cs">
-      <DependentUpon>201812050945191_initialdatamigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812051551176_seconddatamigration.cs" />
-    <Compile Include="Migrations\201812051551176_seconddatamigration.Designer.cs">
-      <DependentUpon>201812051551176_seconddatamigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812051626164_thirdmigration.cs" />
-    <Compile Include="Migrations\201812051626164_thirdmigration.Designer.cs">
-      <DependentUpon>201812051626164_thirdmigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812061543415_fourthmigration.cs" />
-    <Compile Include="Migrations\201812061543415_fourthmigration.Designer.cs">
-      <DependentUpon>201812061543415_fourthmigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812061654028_literallyjustatestfornoreason.cs" />
-    <Compile Include="Migrations\201812061654028_literallyjustatestfornoreason.Designer.cs">
-      <DependentUpon>201812061654028_literallyjustatestfornoreason.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812061658322_thanksluke.cs" />
-    <Compile Include="Migrations\201812061658322_thanksluke.Designer.cs">
-      <DependentUpon>201812061658322_thanksluke.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201812050939212_InitialCreate.resx">
-      <DependentUpon>201812050939212_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812050945191_initialdatamigration.resx">
-      <DependentUpon>201812050945191_initialdatamigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812051551176_seconddatamigration.resx">
-      <DependentUpon>201812051551176_seconddatamigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812051626164_thirdmigration.resx">
-      <DependentUpon>201812051626164_thirdmigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812061543415_fourthmigration.resx">
-      <DependentUpon>201812061543415_fourthmigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812061654028_literallyjustatestfornoreason.resx">
-      <DependentUpon>201812061654028_literallyjustatestfornoreason.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812061658322_thanksluke.resx">
-      <DependentUpon>201812061658322_thanksluke.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

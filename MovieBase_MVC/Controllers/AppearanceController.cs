@@ -28,7 +28,7 @@ namespace MovieBase_MVC.Controllers
             var svc = CreateAppearanceService();
             var model = svc.GetAppearanceById(id);
 
-            return View();
+            return View(model);
         }
 
         // GET: Appearance/Create
