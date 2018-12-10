@@ -1,12 +1,15 @@
-﻿body {
-    padding-top: 50px;
+﻿@import url('Site.css');
+body {
+    padding-top: 0px;
     padding-bottom: 20px;
+    background-color:black;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
+    padding-left: 0px;
     padding-right: 15px;
+    color:white;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -22,3 +25,21 @@ select,
 textarea {
     max-width: 280px;
 }
+#homepage {
+    background: url(http://dailyrunneronline.com/wp-content/uploads/2014/02/o-THEATER-SEATS-facebook.jpg) center;
+    text-align: center;
+    text-decoration: dotted;
+    color: white;
+    margin: 0px;
+}
+.lead{
+    text-align:center;
+    color:white;
+}
+.caret{
+    color:red;
+}
+.html @container{
+    text-align:left;
+}
+
