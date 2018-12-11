@@ -4,36 +4,38 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Appearances of Actors in Movies</h2>
+<div class="jumbotron" id="homepage2">
+    <h1>Appearances</h1>
+    <p>
+        @Html.ActionLink("Create New", "Create", null, new { style = "color:white" })
+    </p>
+</div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Actor)
-        </th>
-        <th>
+        <th width="33%">
             @Html.DisplayNameFor(model => model.Movie)
         </th>
-        <th></th>
+        <th width="33%">
+            @Html.DisplayNameFor(model => model.Actor)
+        </th>
+        <th>Options</th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Actor.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Movie.Title)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.AppearanceId }) |
-            @*@Html.ActionLink("Details", "Details", new { id = item.AppearanceId }) |*@
-            @Html.ActionLink("Delete", "Delete", new { id = item.AppearanceId })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Movie.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Actor.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.AppearanceId }, new { style = "color:white" }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.AppearanceId }, new { style = "color:white" })
+            </td>
+        </tr>
+    }
 
 </table>

@@ -1,15 +1,27 @@
 ﻿@import url('Site.css');
-body {
+html body {
     padding-top: 0px;
     padding-bottom: 20px;
-    background-color:black;
+    background: url(https://wallpaperstock.net/wallpapers/thumbs1/54641hd.jpg);
+    font-family: 'Titillium Web', sans-serif;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 0px;
-    padding-right: 15px;
-    color:white;
+    padding: 0px;
+    color: white;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    display: inline; 
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+}
+
+.container{
+    width: 90%;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -28,18 +40,74 @@ textarea {
 #homepage {
     background: url(http://dailyrunneronline.com/wp-content/uploads/2014/02/o-THEATER-SEATS-facebook.jpg) center;
     text-align: center;
-    text-decoration: dotted;
     color: white;
-    margin: 0px;
+    margin-bottom: 10px;
+}
+#homepage2 {
+    background: url(http://dailyrunneronline.com/wp-content/uploads/2014/02/o-THEATER-SEATS-facebook.jpg) center;
+    text-align: center;
+    color: white;
+    margin: 10px;
 }
 .lead{
     text-align:center;
     color:white;
 }
 .caret{
-    color:red;
+    color:lightgrey;
 }
-.html @container{
-    text-align:left;
+.carousel-caption {
+    height: 40%;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    color: white;
+    font-size: 30px;
+}
+h3, .h3 {
+    font-size: 51px;
+}
+.jumbotron h1, .jumbotron .h1 {
+    font-size: 88px;
+}
+.jumbotron p {
+    margin-bottom: 15px;
+    font-size: 30px;
+    font-weight: 200;
+}
+th {
+    background-color: black;
+    color: white;
+    font-size: 18px;
+}
+td {
+}
+th, td {
+    padding: 5px;
+    text-align: center;
 }
 
+.container > .navbar-collapse, .container-fluid > .navbar-collapse {
+    margin-inline-end: 5px;
+    margin-left: 0;
+}
+
+.footer{
+    text-align: right;
+}
+
+.navbar-collapse {
+    padding-right: 15px;
+    text-align: right;
+    overflow-x: visible;
+}
+#dropdown-menu{
+    font-size: 24px;
+}
+#ActorId{
+    background-color: black;
+}
+#MovieId {
+    background-color: black;
+}
+#GenreName{
+    background-color: black;
+}

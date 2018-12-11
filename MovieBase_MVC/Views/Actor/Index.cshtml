@@ -4,37 +4,30 @@
     ViewBag.Title = "Index";
 }
 
-<div class="jumbotron" id="homepage">
-    <h2>Actor List</h2>
-</div>
+<div class="jumbotron" id="homepage2">
+    <h1>Actor List</h1>
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", null, new { style = "color:white" })
 </p>
+</div>
 <table class="table">
     <tr>
-        @*<th>
-            @Html.DisplayNameFor(model => model.ActorId)
-        </th>*@
-        <th>
+        <th width="50%">
             @Html.DisplayNameFor(model => model.Name)
         </th>
-        <th></th>
-        <th></th>
+       
+        <th width="50%">Options</th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.ActorId)
-        </td>*@
         <td>
             @Html.DisplayFor(modelItem => item.Name)
         </td>
-        <td> </td>
+        
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.ActorId }) |
-            @Html.ActionLink("Details", "Details", new { id = item.ActorId }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.ActorId })
+            @Html.ActionLink("Edit", "Edit", new { id = item.ActorId }, new { style = "color:white" }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ActorId }, new { style = "color:white" })
         </td>
     </tr>
 }
