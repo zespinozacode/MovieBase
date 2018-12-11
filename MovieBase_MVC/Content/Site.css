@@ -1,8 +1,11 @@
 ﻿@import url('Site.css');
 html body {
+    margin-bottom: 25px;
+    margin-top: 20px;
     padding-top: 0px;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
     background: url(https://wallpaperstock.net/wallpapers/thumbs1/54641hd.jpg);
+    font-size:20px;
     font-family: 'Titillium Web', sans-serif;
 }
 
@@ -21,7 +24,7 @@ html body {
 }
 
 .container{
-    width: 90%;
+    width: 95%;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -41,44 +44,58 @@ textarea {
     background: url(http://dailyrunneronline.com/wp-content/uploads/2014/02/o-THEATER-SEATS-facebook.jpg) center;
     text-align: center;
     color: white;
-    margin-bottom: 10px;
+    width: 100%;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 #homepage2 {
     background: url(http://dailyrunneronline.com/wp-content/uploads/2014/02/o-THEATER-SEATS-facebook.jpg) center;
     text-align: center;
     color: white;
-    margin: 10px;
+    width: 100%;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+#homepage3 {
+    background: url(http://dailyrunneronline.com/wp-content/uploads/2014/02/o-THEATER-SEATS-facebook.jpg) center;
+    text-align: center;
+    color: white;
+    width: 100%;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 .lead{
     text-align:center;
     color:white;
+    padding-top: 40px;
 }
 .caret{
     color:lightgrey;
 }
 .carousel-caption {
-    height: 40%;
+    height: 60%;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     color: white;
     font-size: 30px;
 }
 h3, .h3 {
-    font-size: 51px;
+    font-size: 71px;
 }
 .jumbotron h1, .jumbotron .h1 {
     font-size: 88px;
+    margin-bottom: 50px;
 }
 .jumbotron p {
-    margin-bottom: 15px;
+    margin-bottom: 50px;
     font-size: 30px;
     font-weight: 200;
 }
 th {
     background-color: black;
+    opacity: 0.6;
     color: white;
     font-size: 18px;
 }
 td {
+    background-color: black;
+    opacity: 0.6;
 }
 th, td {
     padding: 5px;
@@ -96,11 +113,27 @@ th, td {
 
 .navbar-collapse {
     padding-right: 15px;
+    color:white;
     text-align: right;
     overflow-x: visible;
 }
 #dropdown-menu{
+    font-size:24px;
+    color:white;
+}
+.dropdown-menu{
     font-size: 24px;
+    background-color:black;
+    color: white;
+}
+.dropdown-menu > li > a {
+   display: block;
+   padding: 3px 20px;
+   clear: both;
+   font-weight: normal;
+   line-height: 1.42857143;
+   color: white;
+   white-space: nowrap;
 }
 #ActorId{
     background-color: black;
@@ -110,4 +143,29 @@ th, td {
 }
 #GenreName{
     background-color: black;
+}
+.editheadertransform {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
+h4{
+    text-align:center;
+    font-size:30px;
+}
+.navbar-inverse {
+    background-color: black;
+    opacity: 0.6;
+    border-color: #080808;
+}
+/*.form-group {
+    text-align:center;
+}*/
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    padding: 8px;
+    line-height: 1.42857143;
+     vertical-align: middle;
+    border-top: 1px solid #ddd;
 }
