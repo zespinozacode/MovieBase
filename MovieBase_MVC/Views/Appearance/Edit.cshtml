@@ -3,46 +3,49 @@
 @{
     ViewBag.Title = "Edit";
 }
-    <h1>Edit</h1>
 
-    <h4>Appearance</h4>
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     
 <div class="form-horizontal">
+    <div class="jumbotron" id="homepage3">
+        <h4>Appearance</h4>
+    </div>
     <hr />
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-    @Html.HiddenFor(model => model.AppearanceId)
+   <div class="wrapper2">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.AppearanceId)
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.Appearance.Actor.Name, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.DropDownList("ActorId", null, htmlAttributes: new { @class = "select", @style = "width:200px;" })
-            @Html.ValidationMessageFor(model => model.ActorId, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Appearance.Actor.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ActorId", null, htmlAttributes: new { @class = "select", @style = "width:200px;" })
+                @Html.ValidationMessageFor(model => model.ActorId, "", new { @class = "text-danger" })
+            </div>
         </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Appearance.Movie.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("MovieId", null, htmlAttributes: new { @class = "select", @style = "width:200px;" })
+                @Html.ValidationMessageFor(model => model.MovieId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+   </div>
+ </div>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index",null, new { style = "color:white" })
     </div>
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.Appearance.Movie.Title, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.DropDownList("MovieId", null, htmlAttributes: new { @class = "select", @style = "width:200px;" })
-            @Html.ValidationMessageFor(model => model.MovieId, "", new { @class = "text-danger" })
-        </div>
-    </div>
-
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Save" class="btn btn-default" />
-        </div>
-    </div>
-</div>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }

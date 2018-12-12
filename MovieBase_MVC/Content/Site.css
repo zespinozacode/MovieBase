@@ -55,9 +55,9 @@ textarea {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 #homepage3 {
-    background: url(http://dailyrunneronline.com/wp-content/uploads/2014/02/o-THEATER-SEATS-facebook.jpg) center;
+    background: url(https://images.pexels.com/photos/1366645/pexels-photo-1366645.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) center;
     text-align: center;
-    color: white;
+    color: antiquewhite;
     width: 100%;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
@@ -152,8 +152,9 @@ th, td {
     color: white;
 }
 h4{
+    padding-top: 5%;
     text-align:center;
-    font-size:30px;
+    font-size:60px;
 }
 .navbar-inverse {
     background-color: black;
@@ -168,4 +169,71 @@ h4{
     line-height: 1.42857143;
      vertical-align: middle;
     border-top: 1px solid #ddd;
+}
+.form-horizontal .control-label {
+    padding-top: 7px;
+    margin-left: 100px;
+    margin-bottom: 0;
+    text-align: center;
+}
+.col-md-offset-2 {
+    margin-left: 14.666667%;
+}
+#loginForm{
+    margin-left: 50%;
+    margin-top: 30%;
+    margin-bottom: 30%;
+}
+.form-horizontal .form-group {
+    /*margin-right: -15px;*/
+    margin-left: 40%;
+    margin-right: 390px;
+    padding-top:5%;
+}
+.wrapper {
+    color:black;
+    border: 5px solid black;
+    margin: 0;
+    background: url(https://images.pexels.com/photos/1353368/pexels-photo-1353368.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) center;
+}
+.wrapper2 {
+    color: white;
+    border: 5px solid black;
+    border-radius: 20px;
+    margin: 0;
+    background: url(https://images.pexels.com/photos/821757/pexels-photo-821757.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) right;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 32px;
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 27px;
+}
+#genredropdown{
+    padding-left: 30px;
+}
+.dl-horizontal dd {
+    text-align: left;
+    margin-left: 45%;
+}
+dt{
+    margin-left: 31%;
+}
+#buttonpos{
+    text-align:center;
 }
