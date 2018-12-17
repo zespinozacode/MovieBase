@@ -4,17 +4,18 @@ html body {
     margin-top: 20px;
     padding-top: 0px;
     padding-bottom: 0px;
-    background: url(https://wallpaperstock.net/wallpapers/thumbs1/54641hd.jpg);
-    font-size:20px;
+    background: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/rOWJ-45_eiyypas7p/videoblocks-moving-film-strip-animation-composite-alpha-channel-2_rzzjbmtxte_thumbnail-full01.png) center;
+    font-size: 20px;
     font-family: 'Titillium Web', sans-serif;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding: 0px;
-    color: white;
+    color: antiquewhite;
     font-family: 'Titillium Web', sans-serif;
 }
+
 
 .img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
     display: inline; 
@@ -41,29 +42,30 @@ textarea {
     max-width: 280px;
 }
 #homepage {
-    background: url(http://dailyrunneronline.com/wp-content/uploads/2014/02/o-THEATER-SEATS-facebook.jpg) center;
+    background: url(http://images.pond5.com/filmstrip-lower-thirds-red-background-footage-020614809_prevstill.jpeg) center;
     text-align: center;
-    color: white;
+    color: antiquewhite;
     width: 100%;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-shadow: -5px 6px 5px #000;
+    letter-spacing:5px;
 }
 #homepage2 {
     background: url(http://dailyrunneronline.com/wp-content/uploads/2014/02/o-THEATER-SEATS-facebook.jpg) center;
     text-align: center;
-    color: white;
+    color: antiquewhite;
     width: 100%;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-shadow: -5px 6px 5px #000;
 }
 #homepage3 {
     background: url(https://images.pexels.com/photos/1366645/pexels-photo-1366645.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) center;
     text-align: center;
     color: antiquewhite;
     width: 100%;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-shadow: -5px 6px 5px #000;
 }
 .lead{
     text-align:center;
-    color:white;
+    color:antiquewhite;
     padding-top: 40px;
 }
 .caret{
@@ -81,6 +83,8 @@ h3, .h3 {
 .jumbotron h1, .jumbotron .h1 {
     font-size: 88px;
     margin-bottom: 50px;
+    font-family: 'Major Mono Display', monospace;
+    text-shadow: -5px 10px 5px #080808;
 }
 .jumbotron p {
     margin-bottom: 50px;
@@ -105,6 +109,7 @@ th, td {
 .container > .navbar-collapse, .container-fluid > .navbar-collapse {
     margin-inline-end: 5px;
     margin-left: 0;
+    font-family: 'Major Mono Display', monospace;
 }
 
 .footer{
@@ -149,7 +154,7 @@ th, td {
     padding-bottom: 10px;
     text-align: center;
     font-size: 50px;
-    color: white;
+    color: antiquewhite;
 }
 h4{
     padding-top: 5%;
@@ -186,10 +191,16 @@ h4{
 }
 .form-horizontal .form-group {
     /*margin-right: -15px;*/
-    margin-left: 40%;
-    margin-right: 390px;
+    margin-left: 23%;
+    /*margin-right: 390px;*/
     padding-top:5%;
 }
+
+.form-control {
+    width: auto;
+    padding: 6px 59px;
+}
+
 .wrapper {
     color:black;
     border: 5px solid black;
@@ -197,7 +208,7 @@ h4{
     background: url(https://images.pexels.com/photos/1353368/pexels-photo-1353368.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) center;
 }
 .wrapper2 {
-    color: white;
+    color: antiquewhite;
     border: 5px solid black;
     border-radius: 20px;
     margin: 0;

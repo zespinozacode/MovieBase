@@ -1,62 +1,64 @@
-﻿@model IEnumerable<MovieBase.Models.MovieListItem>
+﻿<!DOCTYPE html>
+
+@model IEnumerable<MovieBase.Models.MovieListItem>
 
 @{
     ViewBag.Title = "Index";
 }
 
-   <div class="jumbotron" id="homepage2">
+<div class="jumbotron" id="homepage2">
     <h1>Movie List</h1>
 
     <p>
-        @Html.ActionLink("Add a Movie", "Create", null, new { style = "color:white" })
+        @Html.ActionLink("Add a Movie", "Create", null, new { style = "color:antiquewhite" })
     </p>
-   </div>
-    <table class="table">
+</div>
+<table class="table">
+    <tr>
+        <th width="15%">
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReleaseDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CoverPicture)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.GenreName)
+        </th>
+        <th>Options</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
         <tr>
-            <th width="15%">
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ReleaseDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CoverPicture)
-            </th>
-        
-            <th>
-                @Html.DisplayNameFor(model => model.GenreName)
-            </th>
-            <th>Options</th>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td width="15%">
+                @Convert.ToString(string.Format("{0:d MMMM yyyy}", item.ReleaseDate))
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                <img src="@Html.DisplayFor(modelItem => item.CoverPicture)" width="30%" height="20%" />
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.GenreName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MovieId }, new { style = "color:white" })
+                @Html.ActionLink("Delete", "Delete", new { id = item.MovieId }, new { style = "color:white" })
+            </td>
         </tr>
+    }
 
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Title)
-                </td>
-                <td width="15%">
-                    @Convert.ToString(string.Format("{0:d MMMM yyyy}", item.ReleaseDate))
-
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Description)
-                </td>
-                <td >
-                    <img src="@Html.DisplayFor(modelItem => item.CoverPicture)" width="60%" height="10%" />
-                </td>
-                
-                <td>
-                    @Html.DisplayFor(modelItem => item.GenreName)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.MovieId }, new { style = "color:white" })  
-                    @Html.ActionLink("Delete", "Delete", new { id = item.MovieId }, new { style = "color:white" })
-                </td>
-            </tr>
-        }
-
-    </table>
+</table>

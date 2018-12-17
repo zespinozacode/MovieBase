@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <meta name="google-site-verification" content="esldHYDse6vFjUlBVSLUj-ri--nU5iTeN4ntmGI4Hrs" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - MovieBase - A Database for Movies</title>
@@ -8,6 +9,10 @@
     @Scripts.Render("~/bundles/modernizr")
     <script src="~/Scripts/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+
+
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -23,16 +28,18 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav" id="dropdown-menu">
 
+
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MovieBase<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                            @if (User.Identity.IsAuthenticated)
-                            {
+                            
+                            
                                 <li>@Html.ActionLink("Movies", "Index", "Movie")</li>
                                 <li>@Html.ActionLink("Actors", "Index", "Actor")</li>
                                 <li>@Html.ActionLink("Appearances", "Index", "Appearance")</li>
-                            }
+                            
+
                         </ul>
                     </li>
 
@@ -44,6 +51,29 @@
     <div class="container body-content">
         @RenderBody()
         <footer class="footer">
+
+            <script>
+                (function () {
+                    var cx = '002503695171654817218:-hn24kohtii';
+                    var gcse = document.createElement('script');
+                    gcse.type = 'text/javascript';
+                    gcse.async = true;
+                    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(gcse, s);
+                })();
+            </script>
+            <gcse:search queryParameterName="search"></gcse:search>
+            <style>
+                .gsc-control-cse {
+                    border-color: black;
+                    background-color: black;
+                    padding-left: 5em;
+                }
+                .gsib_a{
+                    color:black;
+                }
+            </style>
             <p>&copy; @DateTime.Now.Year - MovieBase</p>
         </footer>
     </div>

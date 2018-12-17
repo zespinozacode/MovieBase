@@ -81,7 +81,7 @@ namespace MovieBase_MVC.Controllers
             var model =
                 new AppearanceEdit
                 {
-                    AppearanceId = detail.AppearanceId,
+                    AppearanceId = id,
                     ActorId = detail.ActorId,
                     MovieId = detail.MovieId
                 };

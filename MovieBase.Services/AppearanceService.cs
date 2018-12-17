@@ -96,7 +96,8 @@ namespace MovieBase.Services
                     ctx
                         .Appearances
                         .Single(e => e.AppearanceId == model.AppearanceId && e.UserId == _userId);
-
+                entity.ActorId = model.ActorId;
+                entity.MovieId = model.MovieId;
                 entity.Actor = model.Actor;
                 entity.Movie = model.Movie;
 
