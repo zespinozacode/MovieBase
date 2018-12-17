@@ -9,6 +9,10 @@ html body {
     font-family: 'Titillium Web', sans-serif;
 }
 
+html{
+    overflow-x: hidden;
+}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding: 0px;
@@ -25,8 +29,17 @@ html body {
 }
 
 .container{
-    width: 95%;
+    width: 100%;
 }
+
+.container1 {
+    width: 100%;
+    height: 100%;
+    background-color: antiquewhite;
+    border-radius:20px;
+    opacity: 0.8;
+}
+
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
@@ -57,7 +70,7 @@ textarea {
     text-shadow: -5px 6px 5px #000;
 }
 #homepage3 {
-    background: url(https://images.pexels.com/photos/1366645/pexels-photo-1366645.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) center;
+    background: url(https://www.escaperoomla.com/wp-content/uploads/2016/11/the-theatre.png) center;
     text-align: center;
     color: antiquewhite;
     width: 100%;
@@ -80,6 +93,7 @@ textarea {
 h3, .h3 {
     font-size: 71px;
 }
+
 .jumbotron h1, .jumbotron .h1 {
     font-size: 88px;
     margin-bottom: 50px;
@@ -141,13 +155,13 @@ th, td {
    white-space: nowrap;
 }
 #ActorId{
-    background-color: black;
+    background-color: white;
 }
 #MovieId {
-    background-color: black;
+    background-color: white;
 }
 #GenreName{
-    background-color: black;
+    background-color: white;
 }
 .editheadertransform {
     padding-top: 10px;
@@ -156,10 +170,12 @@ th, td {
     font-size: 50px;
     color: antiquewhite;
 }
-h4{
+h4 {
     padding-top: 5%;
-    text-align:center;
-    font-size:60px;
+    text-align: center;
+    font-size: 60px;
+    font-weight:bolder;
+    font-family: 'Major Mono Display', monospace;
 }
 .navbar-inverse {
     background-color: black;
@@ -172,8 +188,8 @@ h4{
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
     padding: 8px;
     line-height: 1.42857143;
-     vertical-align: middle;
-    border-top: 1px solid #ddd;
+    vertical-align: middle;
+    border-top: 0.5px groove #ddd;
 }
 .form-horizontal .control-label {
     padding-top: 7px;
@@ -191,7 +207,7 @@ h4{
 }
 .form-horizontal .form-group {
     /*margin-right: -15px;*/
-    margin-left: 23%;
+    margin-left: 19%;
     /*margin-right: 390px;*/
     padding-top:5%;
 }
@@ -202,17 +218,19 @@ h4{
 }
 
 .wrapper {
-    color:black;
+    color: black;
     border: 5px solid black;
     margin: 0;
+    font-weight: bolder;
+    font-family: 'Major Mono Display', monospace;
     background: url(https://images.pexels.com/photos/1353368/pexels-photo-1353368.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) center;
 }
 .wrapper2 {
-    color: antiquewhite;
+    color: black;
     border: 5px solid black;
     border-radius: 20px;
-    margin: 0;
-    background: url(https://images.pexels.com/photos/821757/pexels-photo-821757.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) right;
+    margin: 20px;
+    background: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/vfPFP3W/movie-theater-film-reel-background-in-loop_x1ukuvs5__F0000.png) center;
 }
 .btn {
     display: inline-block;
@@ -240,7 +258,7 @@ h4{
 }
 .dl-horizontal dd {
     text-align: left;
-    margin-left: 45%;
+    margin-left: 24%;
 }
 dt{
     margin-left: 31%;
